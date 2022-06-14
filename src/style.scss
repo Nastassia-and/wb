@@ -1,0 +1,73 @@
+@import url(./reset.css);
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.header {
+    background: linear-gradient(to right, rgb(236, 86, 198), purple);
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+
+    &__logo {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: aliceblue;
+        font-size: 35px;
+        font-weight: bold;
+
+        &:hover {
+            color: purple;
+        }
+    }
+
+    &__input {
+        width: 600px;
+        border-radius: 20px;
+        border: none;
+
+        &::placeholder {
+            padding-left: 10px;
+        }
+    }
+
+    &__basket {
+        border: none;
+        border-radius: 10px;
+    }
+}
+
+.wrapper{
+    margin: 0 20px;
+}
+
+.slider {
+    padding: 20px 0;
+}
+
+img, svg {
+    border-radius: 20px;
+}
+
+.bestsellers {
+
+    &__title {
+        padding: 20px 0;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    &__cards-container {
+        display: flex;
+    }
+
+    &__card-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 25px;
+        width: 200px;
+        height: 250px;
+        background-color: plum;
+        border-radius: 10px;
+    }
+}
