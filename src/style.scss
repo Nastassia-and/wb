@@ -48,6 +48,18 @@ img, svg {
     border-radius: 20px;
 }
 
+.carousel-indicators {
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.carousel-indicators [data-bs-target]{
+    border: 2px solid palevioletred;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
 //карточки товара
 .bestsellers {
 
@@ -60,7 +72,7 @@ img, svg {
     &__cards-container {
         display: flex;
     }
-
+    
     &__card-container {
         color:rgb(81, 81, 81);  
         padding: 15px;
@@ -71,7 +83,7 @@ img, svg {
         margin-top: 25px;
         width: 200px;
         height: 250px;
-        background-color: plum;
+        //background-color: plum;
         border-radius: 15px;        
     }
 
