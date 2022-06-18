@@ -36,7 +36,7 @@
     }
 }
 
-.wrapper{
+.wrapper {
     margin: 0 20px;
 }
 
@@ -44,7 +44,8 @@
     padding: 20px 0;
 }
 
-img, svg {
+img,
+svg {
     border-radius: 20px;
 }
 
@@ -53,7 +54,7 @@ img, svg {
     margin-bottom: 2rem;
 }
 
-.carousel-indicators [data-bs-target]{
+.carousel-indicators [data-bs-target] {
     border: 2px solid palevioletred;
     width: 20px;
     height: 20px;
@@ -72,19 +73,19 @@ img, svg {
     &__cards-container {
         display: flex;
     }
-    
+
     &__card-container {
-        color:rgb(81, 81, 81);  
+        color: rgb(81, 81, 81);
         padding: 15px;
         display: flex;
         align-items: center;
-        justify-content:space-between;
+        justify-content: space-between;
         flex-direction: column;
         margin-top: 25px;
         width: 200px;
         height: 250px;
         //background-color: plum;
-        border-radius: 15px;        
+        border-radius: 15px;
     }
 
     &__card-wrapper {
@@ -98,14 +99,14 @@ img, svg {
         margin-top: 100px;
         border: none;
         border-radius: 10px;
-        color:rgb(81, 81, 81);        
+        color: rgb(81, 81, 81);
     }
 
     &__buy {
         background-color: aliceblue;
         border: none;
         border-radius: 10px;
-        color:rgb(81, 81, 81);   
+        color: rgb(81, 81, 81);
     }
 
     &__card-info {
@@ -142,34 +143,63 @@ img, svg {
 }
 
 .btn-primary {
-    background-color: #5b045f;
+    background-color: rgb(122, 29, 99);
 
     &:active {
-        background-color: rgb(122, 29, 99);
-        border: none;  
-        box-shadow: none;   
+        background-color: #5b045f;
+        // border: none;
+        box-shadow: none;
     }
 
     &:focus {
-        background-color: rgb(122, 29, 99);
-        border: none;
-        box-shadow:none;
+        background-color: #5b045f;
+        // border: none;
+        box-shadow: none;
     }
 
     &:focus-visible {
-        background-color: rgb(122, 29, 99);
-        border: none;
+        background-color: #5b045f;
+        // border: none;
     }
 
     &:hover {
-        background-color: rgb(122, 29, 99);
-        border: none;
+        background-color: #5b045f;
+        // border: none;
     }
-    
-}    
 
-.btn-check:focus + .btn, .btn:focus {
-    box-shadow: none;
 }
 
+.btn-secondary {
 
+
+    &:active {
+        // background-color: rgb(122, 29, 99);
+        // border: none;
+        box-shadow: none;
+    }
+
+    &:focus {
+        // background-color: rgb(122, 29, 99);
+        box-shadow: none;
+        // border: none;
+
+    }
+
+    &:focus-visible {
+        // background-color: rgb(122, 29, 99);
+        // border: none;
+        box-shadow: none;
+    }
+
+    &:hover {
+        // background-color: rgb(122, 29, 99);
+        // border: none;
+        box-shadow: none;
+    }
+
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+    box-shadow: none;
+}
