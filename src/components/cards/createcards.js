@@ -10,10 +10,11 @@ fetch('https://62a9a7c1ec36bf40bdbbaae2.mockapi.io/cards')
     .then((response) => response.json())
     .then((arr) => {
         result = arr;
-        arr.forEach(element => {
-            const cards = document.getElementById('cards')
+        const cards = document.getElementById('cards');
 
+        arr.forEach(element => {
             const bestsellers__card = document.createElement('div');
+            bestsellers__card.id = element.id;
             bestsellers__card.classList.add("bestsellers__card");
 
             const card_conrainer = document.createElement('div');

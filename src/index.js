@@ -5,6 +5,3 @@ import { search } from './components/search/search.js';
 const inputSearch = document.getElementById('input');
 document.getElementById('basket').addEventListener('click', openBasket);
 inputSearch.addEventListener('input', search);
-
-console.log('inputSearch', inputSearch);
-console.log('function', search);
