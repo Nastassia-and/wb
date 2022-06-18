@@ -29,7 +29,7 @@ fetch('https://62a9a7c1ec36bf40bdbbaae2.mockapi.io/cards')
 
             const bestsellersCardSale = document.createElement("span");
             bestsellersCardSale.classList.add('bestsellers__sale');
-            bestsellersCardSale.innerHTML = Math.floor(Math.random() * 100);
+            bestsellersCardSale.innerHTML = `${Math.floor(Math.random() * 40)}%`;
 
             const buyButton = document.createElement("button");
             buyButton.innerHTML = "Купить";
@@ -49,21 +49,27 @@ fetch('https://62a9a7c1ec36bf40bdbbaae2.mockapi.io/cards')
 
             const newPrice = document.createElement("span");
             newPrice.classList.add("bestsellers__new-price");
-            newPrice.innerHTML = Math.floor(Math.random() * 100);
+            newPrice.innerHTML = `${(Math.floor(Math.random() * 1000))}`;
+
 
             const oldPrice = document.createElement("span");
             oldPrice.classList.add('bestsellers__old-price');
-            oldPrice.innerHTML = element.price * 100;
+            oldPrice.innerHTML = element.price;
 
             const cardName = document.createElement("span");
             cardName.classList.add("bestsellers__card-name");
 
+            const nameCard = document.createElement('span');
+            nameCard.classList.add("spanCard");
+            nameCard.innerHTML = element.name;
+
             cards.append(bestsellers__card);
-            bestsellers__card.append(card_conrainer, card_info);
+            bestsellers__card.append(card_conrainer, card_info, nameCard);
             card_conrainer.append(bestsellersCardButton, card_wrapper);
             card_wrapper.append(bestsellersCardSale, buyButton);
             card_info.append(card_price, cardName);
             card_price.append(newPrice, oldPrice);
+
         })
     })
     .catch(() => console.log('Error'))
