@@ -1,4 +1,5 @@
 @import url(./reset.css);
+@import url(./components/cards/cards.js);
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 .header {
@@ -62,68 +63,69 @@ svg {
 }
 
 //карточки товара
-.bestsellers {
 
-    &__title {
-        padding: 20px 0;
-        font-size: 25px;
-        font-weight: bold;
-    }
+// .bestsellers {
 
-    &__cards-container {
-        display: flex;
-    }
+//     &__title {
+//         padding: 20px 0;
+//         font-size: 25px;
+//         font-weight: bold;
+//     }
 
-    &__card-container {
-        color: rgb(81, 81, 81);
-        padding: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
-        margin-top: 25px;
-        width: 200px;
-        height: 250px;
-        //background-color: plum;
-        border-radius: 15px;
-    }
+//     &__cards-container {
+//         display: flex;
+//     }
 
-    &__card-wrapper {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
+//     &__card-container {
+//         color: rgb(81, 81, 81);
+//         padding: 15px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         flex-direction: column;
+//         margin-top: 25px;
+//         width: 200px;
+//         height: 250px;
+//         //background-color: plum;
+//         border-radius: 15px;
+//     }
 
-    &__card-view {
-        background-color: aliceblue;
-        margin-top: 100px;
-        border: none;
-        border-radius: 10px;
-        color: rgb(81, 81, 81);
-    }
+//     &__card-wrapper {
+//         width: 100%;
+//         display: flex;
+//         justify-content: space-between;
+//     }
 
-    &__buy {
-        background-color: aliceblue;
-        border: none;
-        border-radius: 10px;
-        color: rgb(81, 81, 81);
-    }
+//     &__card-view {
+//         background-color: aliceblue;
+//         margin-top: 100px;
+//         border: none;
+//         border-radius: 10px;
+//         color: rgb(81, 81, 81);
+//     }
 
-    &__card-info {
-        padding-top: 15px;
-    }
+//     &__buy {
+//         background-color: aliceblue;
+//         border: none;
+//         border-radius: 10px;
+//         color: rgb(81, 81, 81);
+//     }
 
-    &__card-price {
-        display: flex;
-        justify-content: space-between;
-        font-weight: bold;
-    }
+//     &__card-info {
+//         padding-top: 15px;
+//     }
 
-    &__old-price {
-        text-decoration: line-through;
+//     &__card-price {
+//         display: flex;
+//         justify-content: space-between;
+//         font-weight: bold;
+//     }
 
-    }
-}
+//     &__old-price {
+//         text-decoration: line-through;
+
+//     }
+// }
 
 //корзина
 .container-basket {
