@@ -49,12 +49,12 @@ fetch('https://62a9a7c1ec36bf40bdbbaae2.mockapi.io/cards')
 
             const newPrice = document.createElement("span");
             newPrice.classList.add("bestsellers__new-price");
-            newPrice.innerHTML = `${(Math.floor(Math.random() * 1000))}`;
+            newPrice.innerHTML = element.price;
 
 
             const oldPrice = document.createElement("span");
             oldPrice.classList.add('bestsellers__old-price');
-            oldPrice.innerHTML = element.price;
+            oldPrice.innerHTML = `${(Math.floor(Math.random() * 1000))}`;
 
             const cardName = document.createElement("span");
             cardName.classList.add("bestsellers__card-name");
