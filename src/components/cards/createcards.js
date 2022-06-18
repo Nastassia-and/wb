@@ -6,6 +6,7 @@ if (localStorage.getItem("basket")) {
     basket = JSON.parse(localStorage.getItem("basket"));
 }
 
+
 fetch('https://62a9a7c1ec36bf40bdbbaae2.mockapi.io/cards')
     .then((response) => response.json())
     .then((arr) => {
