@@ -4,7 +4,7 @@ export function openBasket() {
     if (localStorage.getItem('basket')) {
         arr = JSON.parse(localStorage.getItem('basket'));
     }
-    console.log('arr', arr);
+
     arr.forEach(element => {
         const containerBasket = document.getElementsByClassName('container-baskets')[0];
 
@@ -72,5 +72,3 @@ export function openBasket() {
         // card_price.append(newPrice, oldPrice);
     })
 }
-
-console.log('document.getElementById("basket")', document.getElementById('basket'));
