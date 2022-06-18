@@ -1,9 +1,9 @@
 //карточка товара(добавляем картинкку, цену и название)
-let res;
+let result;
 fetch('https://62a9a7c1ec36bf40bdbbaae2.mockapi.io/cards')
     .then((response) => response.json())
     .then((arr) => {
-        res = arr;
+        result = arr;
         arr.forEach(element => {
             const cards = document.getElementById('cards')
 
@@ -23,7 +23,7 @@ fetch('https://62a9a7c1ec36bf40bdbbaae2.mockapi.io/cards')
 
             const bestsellersCardSale = document.createElement("span");
             bestsellersCardSale.classList.add('bestsellers__sale');
-            bestsellersCardSale.innerHTML = `${Math.floor(Math.random() * 100)}%`
+            bestsellersCardSale.innerHTML = Math.floor(Math.random() * 100);
 
             const buyButton = document.createElement("button");
             buyButton.innerHTML = "Купить";
@@ -37,7 +37,7 @@ fetch('https://62a9a7c1ec36bf40bdbbaae2.mockapi.io/cards')
 
             const newPrice = document.createElement("span");
             newPrice.classList.add("bestsellers__new-price");
-            newPrice.innerHTML = sMath.floor(Math.random() * 100)
+            newPrice.innerHTML = Math.floor(Math.random() * 100);
 
             const oldPrice = document.createElement("span");
             oldPrice.classList.add('bestsellers__old-price');
@@ -55,4 +55,5 @@ fetch('https://62a9a7c1ec36bf40bdbbaae2.mockapi.io/cards')
         })
     })
     .catch(() => console.log('Error'))
-export default res
+
+export default result;

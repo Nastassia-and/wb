@@ -1,1 +1,1 @@
-import res from "./components/cards/cards"
+import result from './components/cards/createcards';
