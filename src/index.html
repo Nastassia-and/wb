@@ -14,7 +14,7 @@
         <a href="./index.html" class="header__logo">Wildberries</a>
         <input class="header__input" id="input" type="text" placeholder="Я ищу...">
         <!--сделать поиск-->
-        <button type="button" class="header__basket btn btn-primary" data-bs-toggle="modal"
+        <button id="basket" type="button" class="header__basket btn btn-primary" data-bs-toggle="modal"
             data-bs-target="#exampleModal">Корзина</button>
         <!-- Модальное окно -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -25,10 +25,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="container-basket">
-                            <span>Название товара</span>
-                            <span id="price-basket">стоимость товара</span>
-                        </div>
+                        <div class="container-baskets"></div>
                         <div class="container-summa">
                             <span>Итого:</span>
                             <span>сумма</span>

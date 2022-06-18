@@ -1,5 +1,11 @@
 //карточка товара(добавляем картинкку, цену и название)
 let result;
+let basket = [];
+
+if (localStorage.getItem("basket")) {
+    basket = JSON.parse(localStorage.getItem("basket"));
+}
+
 fetch('https://62a9a7c1ec36bf40bdbbaae2.mockapi.io/cards')
     .then((response) => response.json())
     .then((arr) => {
@@ -28,6 +34,12 @@ fetch('https://62a9a7c1ec36bf40bdbbaae2.mockapi.io/cards')
             const buyButton = document.createElement("button");
             buyButton.innerHTML = "Купить";
             buyButton.classList.add(`bestsellers__buy`);
+
+            buyButton.addEventListener('click', () => {
+                basket.push(element);
+                localStorage.setItem('basket', JSON.stringify(basket));
+                newPrice.innerHTML;
+            });
 
             const card_info = document.createElement('div');
             card_info.classList.add("bestsellers__card-info");
