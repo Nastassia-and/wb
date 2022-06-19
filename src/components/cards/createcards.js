@@ -26,6 +26,12 @@ fetch('https://62a9a7c1ec36bf40bdbbaae2.mockapi.io/cards')
             bestsellersCardButton.innerHTML = "Быстрый просмотр";
             bestsellersCardButton.classList.add('bestsellers__card-view');
 
+            bestsellersCardButton.addEventListener('click', () => {
+                bestsellersCardButton.innerHTML =
+                    ("<img onclick='close_photo()' style='position: absolute;' src='" + element.image + "'>")
+                // Это пока взято из инета
+            });
+
             const card_wrapper = document.createElement('div');
             card_wrapper.classList.add("bestsellers__card-wrapper");
 
