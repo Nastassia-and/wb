@@ -5,8 +5,10 @@
 }
 
 .deleteButton {
-
-    background-color: rgb(105, 105, 105);
+    background-color: rgb(244, 90, 193);
+    border: none;
+    border-radius: 10px;
+    color: rgb(81, 81, 81);
 
     &:active {
         background-color: rgb(105, 105, 105);
@@ -21,7 +23,7 @@
     }
 
     &:hover {
-        background-color: rgb(105, 105, 105);
+        border: 1px solid rgb(105, 105, 105);
     }
 
 }
