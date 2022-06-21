@@ -89,6 +89,7 @@ fetch('https://62a9a7c1ec36bf40bdbbaae2.mockapi.io/cards')
 
         })
     })
+    
     .catch(() => console.log('Error'))
 
 export default result;
