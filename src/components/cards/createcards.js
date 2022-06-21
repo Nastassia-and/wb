@@ -25,13 +25,19 @@ fetch('https://62a9a7c1ec36bf40bdbbaae2.mockapi.io/cards')
             const bestsellersCardButton = document.createElement("button");
             bestsellersCardButton.innerHTML = "Быстрый просмотр";
             bestsellersCardButton.classList.add('bestsellers__card-view');
+            bestsellersCardButton.classList.add('btn');
+            bestsellersCardButton.classList.add('btn-primary');
 
             bestsellersCardButton.addEventListener('click', () => {
-                bestsellersCardButton.innerHTML =
-                    ("<img onclick='close_photo()' style='position: absolute;' src='" + element.image + "'>")
-                // Это пока взято из инета
+                bestsellersCardButton.setAttribute('type','button');
+                bestsellersCardButton.setAttribute('data-bs-toggle','modal');
+                bestsellersCardButton.setAttribute('data-bs-target','#exampleModal1');
+    
+                const modal_img = document.getElementById('modal-img');
+                modal_img.setAttribute("src", element.image);
+    
             });
-
+            
             const card_wrapper = document.createElement('div');
             card_wrapper.classList.add("bestsellers__card-wrapper");
 

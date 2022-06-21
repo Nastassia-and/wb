@@ -3,12 +3,6 @@
 @import url(./components/basket/basket.scss);
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-/*@mixin desktop {
-    @media screen and (max-width: 1200px) {
-        @content;
-    }
-}    удалить если не пригодится*/
-
 @mixin laptop {
     @media screen and (max-width: 992px) {
         @content;
