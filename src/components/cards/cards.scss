@@ -1,9 +1,20 @@
+@mixin tablets {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
 .bestsellers {
+    margin-top: 50px;
 
     &__title {
         padding: 20px 0;
         font-size: 25px;
         font-weight: bold;
+
+        @include tablets() {
+            font-size: 18px;
+        }
     }
 
     &__cards-container {
@@ -46,6 +57,10 @@
         border: none;
         border-radius: 10px;
         color: rgb(81, 81, 81);
+
+        &:active {
+            border: 2px solid rgb(230, 42, 192);
+        }
     }
 
     &__card-info {
