@@ -4,6 +4,8 @@ let basket = [];
 
 if (localStorage.getItem("basket")) {
     basket = JSON.parse(localStorage.getItem("basket"));
+} else {
+    localStorage.setItem('basket', JSON.stringify([]));
 }
 
 
@@ -50,6 +52,7 @@ fetch('https://62a9a7c1ec36bf40bdbbaae2.mockapi.io/cards')
             buyButton.classList.add(`bestsellers__buy`);
 
             buyButton.addEventListener('click', () => {
+                basket = JSON.parse(localStorage.getItem("basket"));
                 basket.push(element);
                 localStorage.setItem('basket', JSON.stringify(basket));
                 newPrice.innerHTML;
