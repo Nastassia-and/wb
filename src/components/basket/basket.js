@@ -16,7 +16,11 @@ export function openBasket() {
 
         deleteButton.addEventListener('click', () => {
             basketElement.remove();
-            // localStorage.removeItem('basket');  ХЗ, как удалить из local определенный элемент
+            const basket = JSON.parse(localStorage.getItem('basket'));
+            // arr = arr.filter((item) => item.id !== element.id);
+            localStorage.setItem('basket', JSON.stringify(basket.filter((item) => item.id !== element.id)));
+
+            getSum();
         });
 
         const spanName = document.createElement("span");
@@ -30,8 +34,9 @@ export function openBasket() {
         containerBasket.append(basketElement);
 
         document.getElementsByClassName('btn-secondary')[0].addEventListener('click', () => {
-            localStorage.removeItem('basket');
-            document.getElementsByClassName('container-baskets')[0].innerHTML = 'Корзина пуста';
+            localStorage.setItem('basket', JSON.stringify([]));
+            arr = [];
+            document.getElementsByClassName('container-baskets')[0].innerHTML = '';
             document.getElementById('sum').innerHTML = '0 руб.';
         });
     });
